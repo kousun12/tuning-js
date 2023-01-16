@@ -1,5 +1,5 @@
 # tuning-js
-musical tuning function used to create well tuned computers
+musical tuning function used to create well tuned computers. sister to [pytuning](https://github.com/kousun12/pytuning)
 
 
 ## Usage
