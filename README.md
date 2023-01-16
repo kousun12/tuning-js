@@ -5,7 +5,12 @@ musical tuning function used to create well tuned computers
 ## Usage
 
 ```typescript
+import Tuning from "./Tuning";
+
+// E.g. La Monte Young's "Well Tuned Piano"
 const LMYRatios = ["567/512", "9/8", "147/128", "21/16", "1323/1024", "189/128", "3/2", "49/32", "7/4", "441/256", "63/32", "1200."];
+
+
 // Initialize with either string ratios or cents, per the .scl spec
 const lmy = new Tuning(LMYRatioStrings);
 
@@ -24,8 +29,10 @@ console.log(lmy.frequencies())
 console.log(lmy.frequencies(-1)[0]) // optional arg to shift octave up or down
 // 220
 
+
 // Same ratios, but pin A in E♭ tonic to 440Hz
 const lmyEb = new Tuning(LMYRatioStrings, [440, 6]);
+
 console.log(lmyEb.frequencies())
 // [297.989417989418, 330, 335.23809523809524, 342.22222222222223, 391.1111111111111, 385, 440, 446.984126984127, 456.29629629629625, 521.4814814814814, 513.3333333333333, 586.6666666666666];
 ```
